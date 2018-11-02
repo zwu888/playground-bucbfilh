@@ -1,15 +1,33 @@
-# Welcome!
-
-This C++ template lets you get started quickly with a simple one-page playground.
-
+# 
 ```C++ runnable
 #include <iostream>
 
 using namespace std;
 
+class Base {
+    public:
+        Base() { cout << "Base() called" << endl;
+        }
+};
+
+class S1:public Base {
+    public:
+        S1() { cout << "S1() called" << endl;}
+};
+
+class S1:public virtual Base {
+    public:
+        S1() { cout << "S2() called" << endl;}
+};
+
+class M : public S1, public S2 {
+    public:
+         M() { cout << "M() called" << endl;}
+};
+
 int main() 
 {
-    cout << "Hello, World!";
+    M mm;
     return 0;
 }
 ```
