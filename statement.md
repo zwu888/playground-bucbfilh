@@ -15,9 +15,9 @@ class S1:public Base {
         S1() { cout << "S1() called" << endl;}
 };
 
-class S1:public virtual Base {
+class S2:public virtual Base {
     public:
-        S1() { cout << "S2() called" << endl;}
+        S2() { cout << "S2() called" << endl;}
 };
 
 class M : public S1, public S2 {
